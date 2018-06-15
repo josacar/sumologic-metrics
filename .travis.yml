@@ -1,10 +1,16 @@
 language: ruby
 cache: bundler
 sudo: false
-
 rvm:
-  - 2.5.1
-  - jruby
-
+- 2.5.1
+- jruby
 before_install: gem install bundler -v 1.16.1
 script: bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: J7k0utvWMKhFkTSamwZqsxf8p3l6kLrBtgRenxijegq9EZvyx2NcDt/v9dWaQy2OHRN5iFXQ+aDWzRuNInmZ7+eIDXz6ygAQI+2SxvJN6s1oIsBm/Yz9r6XNldngFLaWsUsXzDwFVSBGRdDXE5VM4VpqTTLtjDHbWxpcYa/whx71M8KD5k4TRR1S5TxnT2kYw7CteATOwvkvXLtEdYlZeGi9jnJrWx8O9pM9hACRKaZielFeuwmFsuENIkT3bD16nefS5Zo1RPdld5gQSa1BegMshl2D85kLUnY1G3TZNJw5C+Z29jfddIPUWNpvqRiMRtDBmq2aaxvTtkSUu1x858wbwEW0FUAE7kMXaXa/8NsG0K+kCR7yXYQBx81n+iuUYN43sH1zGpGzdNihuD2EvsYEtqn0nr9tz40+I8jNZN8FqkbdvG4NB05ZkRGKvSC4c1Gmg/91fWr78CEU17Ah6mqwTrw3CBkU2aDHfIq3GApGRcYm6tGU2eFLqgfkpfiRU9rwYoNICRAQt2RRoheM5xuv75QCy71WBA44v7JZ7jIOaM9wAT2E/GMSR4fUMsiTyVtllFRbO4y2qbjRS/QqjTNgfGfR/VFxFt603RUWPNvihPnRoVsQMqojkeF200t8u0W1vEKd0H2aBDeY7swMyzYPIHFKjsjJDuoBw0t4C6s=
+  gem: sumologic-metrics
+  on:
+    tags: true
+    repo: josacar/sumologic-metrics
