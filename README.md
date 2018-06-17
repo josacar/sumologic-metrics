@@ -1,6 +1,7 @@
 # Sumologic::Metrics
 
 [![Build Status](https://www.travis-ci.org/josacar/sumologic-metrics.svg?branch=master)](https://www.travis-ci.org/josacar/sumologic-metrics)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics?ref=badge_shield)
 
 Upload metrics to Sumologic!
 
@@ -44,6 +45,9 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/josaca
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics?ref=badge_large)
 
 ## Code of Conduct
 
