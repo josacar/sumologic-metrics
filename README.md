@@ -2,8 +2,13 @@
 
 [![Build Status](https://www.travis-ci.org/josacar/sumologic-metrics.svg?branch=master)](https://www.travis-ci.org/josacar/sumologic-metrics)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjosacar%2Fsumologic-metrics?ref=badge_shield)
+[![Gem Version](https://badge.fury.io/rb/sumologic-metrics.svg)](https://badge.fury.io/rb/sumologic-metrics)
 
 Upload metrics to Sumologic!
+
+## Requirements
+
+- At least MRI 2.5 or JRuby 9.2.0.0
 
 ## Installation
 
@@ -31,6 +36,23 @@ url = ENV.fetch('SUMOLOGIC_ENDPOINT')
 metrics = Sumologic::Metrics.new(collector_uri: url)
 metrics.push('cluster=prod node=lb-1 metric=cpu  ip=2.2.3.4 team=infra 99.12 1528020619')
 ```
+
+### #push
+
+Queues the metric to the worker ( asynchronous )
+
+### #queued_metrics
+
+Returns the size of the queued items
+
+### #flush
+
+Waits synchronously until the queue is empty
+
+## Documentation
+
+- [Carbon 2.0](https://help.sumologic.com/Send-Data/Sources/02Sources-for-Hosted-Collectors/HTTP-Source/Upload-Data-to-an-HTTP-Source) formatted metrics
+
 
 ## Development
 
