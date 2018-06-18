@@ -1,3 +1,5 @@
+require 'sumologic/metrics/version'
+
 module Sumologic; class Metrics; module Defaults
   module Request
     HEADERS = {
